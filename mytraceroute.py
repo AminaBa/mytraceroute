@@ -30,7 +30,7 @@ def mytraceroute(destination):
 
 
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description='Perfom a personalized traceroute')
-	parser.add_argument('-d', '--destination', help='destination domain')
+	parser = argparse.ArgumentParser(prog='mytraceroute.py', usage='mytraceroute.py -d <destination_domain>', description='Perform traceroute')
+	parser.add_argument('destination')
 	args = parser.parse_args()
 	mytraceroute(args.destination)
